@@ -1,0 +1,37 @@
+# Arquivo de configuração de proteção contra Força Bruta (Fail2Ban)
+# Local de instalação recomendado: /etc/fail2ban/jail.local
+
+[DEFAULT]
+# Tempo de banimento padrão: 1 hora (3600 segundos)
+bantime = 3600
+
+# Janela de tempo para contagem de falhas: 10 minutos (600 segundos)
+findtime = 600
+
+# Número máximo de falhas permitidas antes do banimento
+maxretry = 3
+
+# Ignorar o IP da rede de gerenciamento interna
+ignoreip = 127.0.0.1/8 192.168.56.1
+
+# -------------------------------------------------------------
+# Proteção contra Ataques de Força Bruta no Serviço FTP
+# -------------------------------------------------------------
+[vsftpd]
+enabled  = true
+port     = ftp,ftp-data,ftps,ftps-data
+logpath  = /var/log/vsftpd.log
+maxretry = 3
+findtime = 600
+bantime  = 7200
+
+# -------------------------------------------------------------
+# Proteção contra Ataques de Força Bruta no Apache (DVWA / Web)
+# -------------------------------------------------------------
+[apache-auth]
+enabled  = true
+port     = http,https
+logpath  = /var/log/apache2/*error.log
+maxretry = 5
+findtime = 600
+bantime  = 3600
