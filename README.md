@@ -185,7 +185,7 @@ dio-desafio-bruteforce-medusa/
    ```
 5. Clone este repositório no seu Kali Linux:
    ```bash
-   git clone https://github.com/<seu-usuario>/dio-desafio-bruteforce-medusa.git
+   git clone https://github.com/lcndj899/dio-desafio-bruteforce-medusa.git
    cd dio-desafio-bruteforce-medusa
    ```
 6. Execute as auditorias demonstrativas conforme descrito na seção de Cenários.
@@ -203,4 +203,4 @@ A realização deste projeto reforçou a compreensão prática sobre a facilidad
 * **Desenvolvido por:** [Seu Nome Aqui]
 * **Formação:** Cibersegurança - DIO (Digital Innovation One)
 * **LinkedIn:** [https://linkedin.com/in/seuperfil](https://linkedin.com)
-* **GitHub:** [https://github.com/seuusuario](https://github.com)
+* **GitHub:** [https://github.com/lcndj899](https://github.com/lcndj899)
